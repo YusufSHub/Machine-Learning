@@ -39,7 +39,6 @@ print(ali.kosmak(90))
 
 #eksik veriler
 #sci - kit learn
-
 from sklearn.impute import SimpleImputer
 
 imputer = SimpleImputer(missing_values=np.nan, strategy='mean')
@@ -50,11 +49,15 @@ imputer = imputer.fit(Yas[:,1:4])
 Yas[:,1:4] = imputer.transform(Yas[:,1:4])
 print(Yas)
 
+
+
+
+
+## Encoder Kategorik-> Numeric
 ulke = veriler.iloc[:,0:1].values
 print(ulke)
 
 from sklearn import preprocessing
-
 le = preprocessing.LabelEncoder()
 
 ulke[:,0] = le.fit_transform(veriler.iloc[:,0])
@@ -65,7 +68,9 @@ ohe = preprocessing.OneHotEncoder()
 ulke = ohe.fit_transform(ulke).toarray()
 print(ulke)
 
-print(list(range(22)))
+
+
+## Numpy df olusturma
 sonuc = pd.DataFrame(data=ulke, index = range(22), columns = ['fr','tr','us'])
 print(sonuc)
 
