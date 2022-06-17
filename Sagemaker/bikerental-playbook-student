@@ -168,7 +168,7 @@ under SERVICES search LAMBDA
 select the star next to it
 left CLICK open link in new tab
 
-CLICK CREATE FUNCTION on upper-left
+CLICK CREATE FUNCTION on upper-right
 
 WRITE function name  "lambda-your-name"
 Select Python for RUNTIME
